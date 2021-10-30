@@ -69,11 +69,6 @@ stages:
 - stage: 'Dev'
   displayName: 'Deploy the web application'
   dependsOn: Build
-  condition: |
-    and
-    (
-      succeeded()
-    )
   jobs:
   - deployment: Deploy
     pool:
